@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="tailwind.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Survey Form</title>
+</head>
+<body class="bg-gray-400">
+    <header>
+        <div class="header">
+            <h1 class="title text-5xl text-gray-800">Welcome!</h1>
+            <p class="open-line text-gray-800">Please take your time to answer the following questions and submit when you're done.</p>
+        </div>
+    </header>
+    <form class="bg-gray-800 bg-opacity-75 rounded-lg shadow-2xl">
+        <div class="form-group">
+            <label class="name-label p-1" for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control rounded-full px-3 py-1" placeholder="Enter your name" required/>
+        </div>
+        <div class="form-group">
+            <label class="age-label p-1" for="age">Age (Optional)</label>
+            <input type="number" name="age" id="age" class="form-control rounded-full px-3 py-1" min="1" max="150" placeholder="Enter your age"/>
+        </div>
+        <div class="form-group radio">
+            <p class="gender-label p-1">Gender</p>
+            <div class="box rounded-full">
+                <label class="label text-white">
+                    <input name="user-gender" value="male" type="radio" class="input-gender"/>Male
+                </label>
+            </div>
+            <div class="box rounded-full">
+                <label class="label text-white">
+                    <input name="user-gender" value="female" type="radio" class="input-gender"/>Female
+                </label>
+            </div>
+            <div class="box rounded-full">
+                <label class="label text-white">
+                    <input name="user-gender" value="other" type="radio" class="input-gender"/>Other
+                </label>
+            </div>
+        </div>
+        <div class="form-group radio">
+            <p class="role-label p-1">Role</p>
+            <div class="box rounded-full">
+                <label class="label text-white">
+                    <input name="user-role" value="student" type="radio" class="input-role"/>Student
+                </label>
+            </div>
+            <div class="box rounded-full">
+                <label class="label text-white">
+                    <input name="user-role" value="full-time job" type="radio" class="input-role"/>Full-time Job
+                </label>
+            </div>
+            <div class="box rounded-full">
+                <label class="label text-white">
+                    <input name="user-role" value="other" type="radio" class="input-role"/>Other
+                </label>
+            </div>
+            <div class="box rounded-full">
+                <label class="label text-white">
+                    <input name="user-role" value="rather not say" type="radio" class="input-role"/>Rather Not Say
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="email-label p-1" for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control rounded-full px-3 py-1" placeholder="Enter your email"/>
+        </div>
+        <div class="form-group">
+            <p class="comments-label p-1">Any further comments or suggestions?</p>
+            <textarea
+              id="comments"
+              class="input-textarea rounded-full px-3 py-1"
+              name="comment"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+          <div class="form-group text-white">
+            <button type="submit" id="submit" class="submit-button rounded-full">
+                Submit
+            </button>
+          </div>
+    </form>
+    <footer>
+        <p>Created by <a href="https://github.com/bea-martinsds">Bea Martins</a></p>
+    </footer>
+</body>
+</html>
